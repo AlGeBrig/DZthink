@@ -11,9 +11,9 @@ side_c = gets.chomp.to_i
 
 a, b, hypo = [side_a, side_b, side_c].sort
 
-hypo_check = hypo ** 2
+hypo_check = hypo**2
 
-if hypo_check == a * a + b * b 
+if hypo_check == a * a + b * b
   puts 'Этот треугольник прямоугольный'
 elsif a == b && a == hypo
   puts 'Этот треугольник равнобедренный и равносторонний, но не прямоугольный'
