@@ -1,40 +1,26 @@
-puts "Введите первую сторону треугольника"
-a = gets.chomp.to_i
+# frozen_string_literal: true
 
-puts "Введите вторую сторону треугольника"
-b = gets.chomp.to_i
+puts 'Введите первую сторону треугольника'
+side_a = gets.chomp.to_i
 
-puts "Введите третью сторону треугольника"
-c = gets.chomp.to_i
+puts 'Введите вторую сторону треугольника'
+side_b = gets.chomp.to_i
 
-if a > b && a > c 
-    hypo = a
-    elsif b > a && b > c 
-        hypo = b
-    elsif c > a && c > b
-        hypo = c 
-    else hypo = 0
+puts 'Введите третью сторону треугольника'
+side_c = gets.chomp.to_i
+
+a, b, hypo = [side_a, side_b, side_c].sort
+
+hypo_check *= hypo
+
+if hypo_check == a * a + b * b || hypo_check == a * a + c * c || hypo_check == c * c + b * b
+  puts 'Этот треугольник прямоугольный'
 end
 
-
-hypo = hypo * hypo
-
-
-if hypo == a * a + b * b || hypo == a * a + c * c || hypo == c * c + b * b 
-    puts "Этот треугольник прямоугольный"
-    hypo = true
+if a == b && a == c
+  puts 'Этот треугольник равнобедренный и равносторонний, но не прямоугольный'
+elsif a == b || a == c || b == c
+  puts 'Этот треугольник - равнобедренный'
+else
+  puts 'Это обычный треугольник'
 end
-
-if a == b && a == c 
-    puts "Этот треугольник равнобедренный и равносторонний, но не прямоугольный"
-    elsif a == b || a == c || b == c 
-        puts "Этот треугольник - равнобедренный"
-    elsif hypo != true
-        puts "Это обычный треугольник"        
-    else      
-end
-
-
-        
-
-
