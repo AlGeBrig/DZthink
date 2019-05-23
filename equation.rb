@@ -11,9 +11,11 @@ c = gets.chomp.to_i
 
 d = b * b - 4 * a * c
 
+root = Math.sqrt(d) if d >= 0
+
 if d > 0
-  x1 = (- b + Math.sqrt(d)) / (2 * a)
-  x2 = (- b - Math.sqrt(d)) / (2 * a)
+  x1 = (-b + root) / (2 * a)
+  x2 = (-b - root) / (2 * a)
   puts "D = #{d}, X1 = #{x1}, X2 = #{x2}"
 elsif d == 0
   x = -b / 2 * a
