@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-month = {}
+month_hash = {}
 
-month = {
+month_hash = {
   'январь' => 31,
   'февраль' => 28,
   'март' => 31,
@@ -17,6 +17,6 @@ month = {
   'декабрь' => 31
 }
 
-month.each do |m, d|
-  puts m if d == 30
+month_hash.each do |month, day|
+  puts month if day == 30
 end

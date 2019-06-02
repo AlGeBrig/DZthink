@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
 fib = [1, 1]
-n = 0
 
 loop do
-  fib_next = fib[n] + fib[n + 1]
-  n += 1
+  fib_next = fib[-1] + fib[-2]
 
   break if fib_next >= 100
 

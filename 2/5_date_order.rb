@@ -3,10 +3,7 @@
 puts 'Введите год'
 year = gets.chomp.to_i
 
-if year % 4 == 0 && year % 100 != 0
-  puts 'Этот год високосный'
-  vis_year = true
-elsif year % 400 == 0
+if (year % 4 == 0 && year % 100 != 0) || year % 400 == 0
   puts 'Этот год високосный'
   vis_year = true
 else
